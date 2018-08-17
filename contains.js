@@ -29,7 +29,7 @@ mapkit.BoundingRegion.prototype.contains = function contains(point) {
     default:
       throw new Error(
         'Point must be of type mapkit.MapPoint, mapkit.Coordinate, a '
-      + 'map-point literal of the form { x: Number, y: number }, or '
+      + 'map-point literal of the form { x: Number, y: Number }, or '
       + 'a coordinate literal of form { latitude: Number, longitude: Number }'
       );
       break;
