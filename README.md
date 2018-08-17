@@ -20,6 +20,8 @@ For example:
 require('apple-mapkit-js');
 require('apple-mapkit-js/contains');
 
+var map = new mapkit.Map();
+
 map.contains(point);                 // Returns true if point is in map's visible region.
 map.region.contains(point);          // Returns true if point is in region.
 map.visibleRectArea.contains(point); // Returns true if point is in MapRect.
