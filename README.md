@@ -8,3 +8,23 @@ Run `npm install --save apple-mapkit-js` to add this package as a dependency of 
 ```
 
 However, npm installing this script into your app allows you to use a tool like Webpack to bake Apple Mapkit JS into your app without first sending an HTTP GET request to Apple's CDN--making your app a little faster to load in browser.
+
+## Contains Method
+If you include the `apple-mapkit-js/contains.js` file in this repo after including the main `apple-mapkit-js` module, all of the region-like objects included with Apple Mapkit JS will be decorated with a prototype function `contains(point)`.
+
+All of these functions take in a point-like object as their first and only argument--and return whether or not that point is contained by the given region.
+
+For example:
+
+```JavaScript
+require('apple-mapkit-js');
+require('apple-mapkit-js/contains');
+
+var map = new mapkit.Map();
+
+map.contains(point);                 // Returns true if point is in map's visible region.
+map.region.contains(point);          // Returns true if point is in region.
+map.visibleRectArea.contains(point); // Returns true if point is in MapRect.
+```
+
+where `point` above can be an instance of `mapkit.MapPoint`, `mapkit.Coordinate`, a map-point literal of the form `{ x: Number, y: Number }`, or a coordinate literal of form `{ latitude: Number, longitude: Number }`.
