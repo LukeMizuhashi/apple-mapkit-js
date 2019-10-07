@@ -9,6 +9,10 @@ Run `npm install --save apple-mapkit-js` to add this package as a dependency of 
 
 However, npm installing this script into your app allows you to use a tool like Webpack to bake Apple Mapkit JS into your app without first sending an HTTP GET request to Apple's CDN--making your app a little faster to load in browser.
 
+## Load specific Versions of Mapkit JS
+
+To load a specific version of Mapkit JS, `require(apple-mapkit-js/ver/5.29.0/mapkit.js)` it. See the `ver/` directory in this repo for which versions of Mapkit JS are available.
+
 ## Contains Method
 If you include the `apple-mapkit-js/contains.js` file in this repo after including the main `apple-mapkit-js` module, all of the region-like objects included with Apple Mapkit JS will be decorated with a prototype function `contains(point)`.
 
